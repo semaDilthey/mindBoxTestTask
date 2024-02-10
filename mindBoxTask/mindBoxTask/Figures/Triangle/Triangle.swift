@@ -13,7 +13,8 @@ final class Triangle: Figure {
     private let sideA: Double
     private let sideB: Double
     private let sideC: Double
-    
+
+    // failable init свою функцию выполяет, но в зависимости от требований заказчика можно сделать throwing init
     init?(sideA: Double, sideB: Double, sideC: Double) {
         // Проверка, что сумма любых двух сторон больше третьей стороны
         guard sideA + sideB > sideC && sideA + sideC > sideB && sideB + sideC > sideA  else {
